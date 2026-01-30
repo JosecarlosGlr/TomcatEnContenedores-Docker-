@@ -8,6 +8,7 @@ Para comenzar, he actualizado los repositorios del sistema y he procedido a inst
 sudo apt update
 sudo apt install docker.io -y
 ```
+![](https://raw.githubusercontent.com/JosecarlosGlr/TomcatEnContenedores-Docker-/refs/heads/main/1.png)
 ### 2. Descarga de la Imagen Oficial de Tomcat
 Una vez instalado Docker, he descargado la última imagen oficial de Tomcat desde Docker Hub. Esto garantiza que disponemos de un entorno limpio, actualizado y listo para usar sin necesidad de configurar manualmente el servidor en el host.
 
@@ -18,8 +19,8 @@ sudo docker pull tomcat:latest
 
 Tras la descarga, verifico que la imagen se encuentra disponible en mi repositorio local de imágenes.
 
-![](2.png)
-![](3.png)
+![](https://raw.githubusercontent.com/JosecarlosGlr/TomcatEnContenedores-Docker-/refs/heads/main/2.png)
+![](https://raw.githubusercontent.com/JosecarlosGlr/TomcatEnContenedores-Docker-/refs/heads/main/3.png)
 
 ---
 
@@ -32,14 +33,14 @@ En lugar de usar una aplicación WAR compleja, he creado una estructura de aplic
 
 Posteriormente, he arrancado el contenedor mapeando el puerto **8888** del host al **8080** del contenedor y montando mi carpeta local en la ruta de aplicaciones de Tomcat (`/usr/local/tomcat/webapps/demo`).
 
-![](6.png)
+![](https://raw.githubusercontent.com/JosecarlosGlr/TomcatEnContenedores-Docker-/refs/heads/main/6.png)
 
 ---
 
 ### 4. Verificación del Despliegue
 Accedo desde el navegador a la dirección `http://localhost:8888/demo/`. Como se observa en la captura, el contenedor responde correctamente sirviendo el archivo HTML creado anteriormente, confirmando que el montaje de volúmenes y el redireccionamiento de puertos funcionan con éxito.
 
-![](7.png)
+![](https://raw.githubusercontent.com/JosecarlosGlr/TomcatEnContenedores-Docker-/refs/heads/main/7.png)
 
 ---
 
